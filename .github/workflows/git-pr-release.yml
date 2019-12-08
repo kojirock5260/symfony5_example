@@ -15,9 +15,9 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.x
-      working-directory: ./work
 
     - name: Creates a release pull request
+      working-directory: ./work
       env:
         GIT_PR_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
