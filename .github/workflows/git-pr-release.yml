@@ -17,7 +17,6 @@ jobs:
         ruby-version: 2.6.x
 
     - name: Creates a release pull request
-      working-directory: ./work
       env:
         GIT_PR_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
