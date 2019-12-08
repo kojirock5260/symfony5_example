@@ -15,6 +15,7 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.x
+      working-directory: ./work
 
     - name: Creates a release pull request
       env:
@@ -23,4 +24,3 @@ jobs:
         git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         gem install -N git-pr-release -v "0.6.0"
         git-pr-release
-      working-directory: ./work
