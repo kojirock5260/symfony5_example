@@ -23,4 +23,4 @@ jobs:
       run: |
         git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         gem install -N git-pr-release -v "0.6.0"
-        git-pr-release
+        git-pr-release --no-fetch
