@@ -19,6 +19,7 @@ jobs:
     - name: Creates a release pull request
       env:
         GIT_PR_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_PR_RELEASE_LABELS: 'release'
       run: |
         git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         gem install -N git-pr-release -v "0.6.0"
